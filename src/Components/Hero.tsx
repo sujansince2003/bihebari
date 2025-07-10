@@ -92,7 +92,7 @@ const Hero = () => {
       </div>
 
       <div className="flex justify-end ">
-        <div className="flex gap-5 backdrop-blur-lg p-14 rounded-2xl">
+        <div className="flex gap-5 backdrop-blur-lg p-16 rounded-tl-2xl">
           <div className="w-[300px] flex flex-col gap-3 justify-center items-center">
             <div className="bg-red-600 rounded-full p-2 inline-block">
               <ShieldCheck size={32} color="white" />
