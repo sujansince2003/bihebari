@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import Layout from "./Layout/Layout";
-import { Register, Login, Landing, Blogs } from "./Pages";
+import { Register, Login, Landing, Blogs, BlogDetail } from "./Pages";
 
 function App() {
   return (
@@ -28,7 +28,15 @@ function App() {
             </Layout>
           }
         />
-        <Route path="/about" element={<Layout>About</Layout>} />
+        <Route
+          path="/blogs/:blogId"
+          element={
+            <Layout>
+              <BlogDetail />
+            </Layout>
+          }
+        />
+
         <Route
           path="/register"
           element={
