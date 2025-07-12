@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import Layout from "./Layout/Layout";
-import { Register, Login, Landing } from "./Pages";
+import { Register, Login, Landing, Blogs } from "./Pages";
 
 function App() {
   return (
@@ -20,7 +20,14 @@ function App() {
             </Layout>
           }
         />
-        <Route path="/home" element={<Layout>Home</Layout>} />
+        <Route
+          path="/blogs"
+          element={
+            <Layout>
+              <Blogs />
+            </Layout>
+          }
+        />
         <Route path="/about" element={<Layout>About</Layout>} />
         <Route
           path="/register"
