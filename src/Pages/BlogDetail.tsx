@@ -1,58 +1,40 @@
-import { Link, useParams } from "react-router-dom";
-import { CalendarDays, Pen, Search } from "lucide-react";
+import { useParams } from "react-router-dom";
+import { CalendarDays, Pen } from "lucide-react";
 import NewChapter from "../Components/NewChapter";
+
+import Nav from "../Components/Nav";
 
 function BlogDetail() {
   const { blogId } = useParams();
+
   console.log(blogId); //for fetching blog details
 
   return (
-    <div>
-      <nav className="relative z-10 flex justify-between items-center px-8 py-6 bg-black">
-        <div className="flex items-center gap-10">
-          <div className="text-white text-2xl font-bold">
-            <img src="/src/assets/logo.png" alt="" />
-          </div>
-          <ul className="flex gap-10 text-white font-medium">
-            <Link to="/" className="hover:underline cursor-pointer">
-              Home
-            </Link>
-            <Link to={"/about"} className="hover:underline cursor-pointer">
-              About us
-            </Link>
-            <li className="hover:underline cursor-pointer">Our Services</li>
-            <Link to="/blogs" className="hover:underline cursor-pointer">
-              Blog
-            </Link>
-            <li className="hover:underline cursor-pointer">Membership Plans</li>
-            <li className="hover:underline cursor-pointer">Contact Us</li>
-          </ul>
-        </div>
+    <div className="min-h-screen relative">
+      <Nav />
+      {/* Blog Content */}
+      <div className="px-4 md:px-8 py-6 md:py-10 flex flex-col gap-4">
+        <img
+          src="/src/assets/blog1.png"
+          alt="Blog"
+          className="w-full h-auto rounded-lg"
+        />
 
-        <div className="flex items-center gap-4">
-          <div className="bg-white rounded-xl py-2 px-3">
-            <Search />
-          </div>
-
-          <button className="bg-white rounded-xl py-2 px-6">Login</button>
-        </div>
-      </nav>
-      <div className="px-8 py-10 flex flex-col gap-4">
-        <img src="/src/assets/blog1.png" alt="" />
         <div>
-          <div className="flex items-center gap-10">
-            <p className="text-lg  flex items-center gap-2">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-10">
+            <p className="text-base md:text-lg flex items-center gap-2">
               <CalendarDays size={18} strokeWidth={3} />
               <span>20/05/2023</span>
             </p>
-            <p className="text-lg  flex items-center gap-2">
+            <p className="text-base md:text-lg flex items-center gap-2">
               <Pen size={18} strokeWidth={3} />
               <span>Rohit Maharjan</span>
             </p>
           </div>
-          <p className="text-base mt-4">
+
+          <p className="text-sm md:text-base mt-4 leading-relaxed">
             Nepali wedding ceremonies in 2025 have evolved into a beautiful
-            blend of tradition and modern lifestyle. Today’s couples are opting
+            blend of tradition and modern lifestyle. Today's couples are opting
             for minimalist and personalized decor themes, fusion outfits that
             mix traditional attire with western styles, and intimate weddings
             with fewer guests at scenic destinations like Pokhara or Nagarkot.
@@ -95,8 +77,35 @@ function BlogDetail() {
           </p>
         </div>
       </div>
-      <div className="my-10">
+
+      <div className="my-10 mb-[500px] md:mb-[200px]">
         <NewChapter />
+      </div>
+      <div className="h-32 md:h-56 bg-black" />
+      <div className="absolute md:bottom-[60px] bottom-[-60px] w-[90%] max-w-6xl left-1/2 -translate-x-1/2 bg-white border border-white rounded-3xl flex flex-col md:flex-row items-center justify-between overflow-hidden shadow-xl">
+        <div className="p-6 md:p-10 flex flex-col gap-4 text-center md:text-left">
+          <h4 className="text-2xl md:text-3xl font-semibold">Get in touch</h4>
+          <p className="text-sm md:text-base text-gray-700">
+            Feel free to reach out to us with any inquiries, questions, or to
+            schedule a consultation. We understand that your wedding day is a
+            once-in-a-lifetime event, and we are committed to ensuring it is
+            magical.
+          </p>
+          <div className="flex flex-col gap-2">
+            <p className="text-lg md:text-2xl">Best Wishes...</p>
+            <h2 className="font-dancingScript text-4xl md:text-5xl">
+              <span className="text-blue-500">Bihe</span>
+              <span className="text-red-500">bari</span>
+            </h2>
+          </div>
+        </div>
+        <div className="p-4">
+          <img
+            className="w-[200px] md:w-[300px] object-contain"
+            src="/src/assets/getintouch.png"
+            alt="Get in Touch"
+          />
+        </div>
       </div>
     </div>
   );
