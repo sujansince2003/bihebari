@@ -8,6 +8,7 @@ import {
   LayoutGrid,
   ChevronRight,
 } from "lucide-react";
+import { Link } from "react-router";
 const Hero = () => {
   return (
     <div
@@ -23,10 +24,16 @@ const Hero = () => {
             <img src="/src/assets/logo.png" alt="" />
           </div>
           <ul className="flex gap-10 text-white font-medium">
-            <li className="hover:underline cursor-pointer">Home</li>
-            <li className="hover:underline cursor-pointer">About us</li>
+            <Link to="/" className="hover:underline cursor-pointer">
+              Home
+            </Link>
+            <Link to={"/about"} className="hover:underline cursor-pointer">
+              About us
+            </Link>
             <li className="hover:underline cursor-pointer">Our Services</li>
-            <li className="hover:underline cursor-pointer">Blog</li>
+            <Link to="/blogs" className="hover:underline cursor-pointer">
+              Blog
+            </Link>
             <li className="hover:underline cursor-pointer">Membership Plans</li>
             <li className="hover:underline cursor-pointer">Contact Us</li>
           </ul>
