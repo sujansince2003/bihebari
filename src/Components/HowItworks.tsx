@@ -1,12 +1,16 @@
 import { CircleCheckBig } from "lucide-react";
+
 const HowItworks = () => {
   return (
-    <div className="px-8 py-36 ">
-      <div className="flex items-center justify-center flex-col gap-3">
-        <h1 className="text-5xl font-medium">How it works</h1>
+    <div className="px-4 md:px-8 py-24 md:py-36">
+      {/* Header */}
+      <div className="flex flex-col items-center justify-center gap-3 text-center">
+        <h1 className="text-3xl md:text-5xl font-medium">How it works</h1>
         <p className="text-sm text-[#737373]">EXPLORE NEW PROFILES</p>
       </div>
-      <div className="flex items-center pt-16 justify-between">
+
+      {/* Steps */}
+      <div className=" hidden md:flex items-center pt-16 justify-between">
         <div className="w-xs flex flex-col items-center gap-4   ">
           <div className=" relative border-1 border-[#FBB53C] rounded-full inline-block">
             <img
@@ -71,45 +75,86 @@ const HowItworks = () => {
           </div>
         </div>
       </div>
-
-      <div className="flex items-center justify-center">
-        <hr className="m-32 w-[90%] border-[#DDDDDD]" />
-      </div>
-      <div className="bg-black flex justify-between px-16 py-10   rounded-[50px]">
-        <div className="pt-10 flex flex-col gap-6">
-          <div>
-            <h1 className="font-dancingScript text-5xl text-white">Bihebari</h1>
-            <p className=" text-base text-[#C2C2C2]">Find someone for life</p>
+      <div className=" md:hidden flex flex-col lg:flex-row items-center justify-center gap-12 pt-16">
+        {[1, 2, 3].map((step) => (
+          <div key={step} className="flex flex-col items-center gap-4 max-w-xs">
+            <div className="relative border border-[#FBB53C] rounded-full inline-block">
+              <img
+                className="h-48 w-48 md:h-64 md:w-64 p-1 object-cover"
+                src="/src/assets/image.png"
+                alt=""
+              />
+              <p className="absolute top-0 left-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-500 text-white flex items-center justify-center text-sm md:text-base">
+                {step}
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center px-2">
+              <p className="text-xl md:text-2xl font-semibold">
+                {step === 1
+                  ? "Create an account"
+                  : step === 2
+                  ? "Browse profiles"
+                  : "Connect"}
+              </p>
+              <p className="text-sm text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod te
+              </p>
+            </div>
           </div>
-          <ul className="flex flex-col gap-2">
-            <li className="text-white flex items-center gap-2 text-base">
-              <CircleCheckBig color="white" size={24} />
-              Search for Brides/Grooms by custom filters
-            </li>
-            <li className="text-white flex items-center gap-2 text-base">
-              <CircleCheckBig color="white" size={24} />
-              Highlight Your Profile
-            </li>
-            <li className="text-white flex items-center gap-2 text-base">
-              <CircleCheckBig color="white" size={24} />
-              Matchmaking Expert Support
-            </li>
-            <li className="text-white flex items-center gap-2 text-base">
-              <CircleCheckBig color="white" size={24} />
-              Chat & Call Support and many more...
-            </li>
+        ))}
+      </div>
+
+      {/* Divider */}
+      <div className="flex items-center justify-center">
+        <hr className="my-20 w-full border-[#DDDDDD]" />
+      </div>
+
+      {/* Call to Action */}
+      <div className="flex flex-col lg:flex-row justify-between items-center bg-black px-6 md:px-12 py-10 rounded-[30px] md:rounded-[50px] gap-10">
+        <div className="flex flex-col gap-6 max-w-xl text-center lg:text-left items-center lg:items-start">
+          <div>
+            <h1 className="font-dancingScript text-4xl md:text-5xl text-white">
+              Bihebari
+            </h1>
+            <p className="text-base text-[#C2C2C2]">Find someone for life</p>
+          </div>
+          <ul className="flex flex-col gap-3">
+            {[
+              "Search for Brides/Grooms by custom filters",
+              "Highlight Your Profile",
+              "Matchmaking Expert Support",
+              "Chat & Call Support and many more...",
+            ].map((text, idx) => (
+              <li
+                key={idx}
+                className="text-white flex items-center gap-2 text-sm md:text-base"
+              >
+                <CircleCheckBig color="white" size={20} />
+                {text}
+              </li>
+            ))}
           </ul>
-          <div className="flex gap-8 ">
+          <div className="flex gap-6 flex-wrap justify-center lg:justify-start">
             <img
-              className="w-[150px]"
+              className="w-[130px] md:w-[150px]"
               src="/src/assets/googleplay.png"
-              alt=""
+              alt="Google Play"
             />
-            <img className="w-[150px]" src="/src/assets/appstore.png" alt="" />
+            <img
+              className="w-[130px] md:w-[150px]"
+              src="/src/assets/appstore.png"
+              alt="App Store"
+            />
           </div>
         </div>
+
         <div>
-          <img className="h-[360px]" src="/src/assets/mobileapp.png" alt="" />
+          <img
+            className="h-[280px] md:h-[360px] object-contain"
+            src="/src/assets/mobileapp.png"
+            alt="Mobile App"
+          />
         </div>
       </div>
     </div>
