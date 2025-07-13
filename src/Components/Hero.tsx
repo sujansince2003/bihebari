@@ -7,20 +7,38 @@ import {
   ShieldCheck,
   LayoutGrid,
   ChevronRight,
-  Menu, // Import Menu icon for mobile
-  X, // Import X icon for closing mobile menu
+  Menu,
+  X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react"; // Import useState hook
+import { useState, useEffect } from "react";
+
+const images = [
+  "/hero1.png",
+  "/hero2.png",
+  "/hero3.png",
+  "/hero4.png",
+  "/hero5.png",
+  "/hero6.png",
+  "/hero7.png",
+];
 
 const Hero = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div
-      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat"
+      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
       style={{
-        backgroundImage: "url('https://i.postimg.cc/pdH3XhJ3/image.png')",
+        backgroundImage: `url(${images[currentImage]})`,
       }}
     >
       {/* Navbar */}
@@ -28,7 +46,7 @@ const Hero = () => {
         {/* Logo */}
         <div className=" gap-20 hidden md:flex">
           <div className="text-white text-2xl font-bold">
-            <img src="/src/assets/logo.png" alt="Logo" className="h-16 w-20" />
+            <img src="/logo.png" alt="Logo" className="h-16 w-20" />
           </div>
           <ul className="flex flex-row gap-8 text-white font-medium text-base items-center">
             <Link to="/" className="hover:underline cursor-pointer">
@@ -57,7 +75,7 @@ const Hero = () => {
         </div>
         {/* Hamburger menu icon for mobile */}
         <div className="md:hidden w-full flex justify-between items-center ">
-          <img src="/src/assets/logo.png" alt="Logo" className="h-10" />
+          <img src="/logo.png" alt="Logo" className="h-10" />
 
           <div className="flex gap-2">
             <div className="bg-white rounded-xl p-2">

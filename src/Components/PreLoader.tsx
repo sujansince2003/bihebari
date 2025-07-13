@@ -21,7 +21,7 @@ const Preloader = () => {
     <div className="fixed inset-0 z-50 bg-white flex flex-col justify-center items-center">
       {/* Logo */}
       <div className="mb-4">
-        <img className="w-xs" src="/src/assets/logo.png" alt="" />
+        <img className="w-xs" src="/logo.png" alt="" />
       </div>
 
       <div className="w-52 h-1.5 bg-gray-200 rounded-full overflow-hidden">
