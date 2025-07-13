@@ -5,37 +5,37 @@ const ourServices = [
     title: "Matchmaking",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    image: "/src/assets/service1.png",
+    image: "/service1.png",
   },
   {
     title: "Matchmaking",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    image: "/src/assets/service1.png",
+    image: "/service1.png",
   },
   {
     title: "Matchmaking",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    image: "/src/assets/service1.png",
+    image: "/service1.png",
   },
   {
     title: "Matchmaking",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    image: "/src/assets/service1.png",
+    image: "/service1.png",
   },
   {
     title: "Matchmaking",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    image: "/src/assets/service1.png",
+    image: "/service1.png",
   },
 ];
 
 const OurServices = () => {
   return (
-    <div className="relative">
+    <div className="relative" id="services">
       <NewChapter />
 
       {/* Services Section */}
@@ -95,7 +95,7 @@ const OurServices = () => {
         <div className="p-4">
           <img
             className="w-[200px] md:w-[300px] object-contain"
-            src="/src/assets/getintouch.png"
+            src="/getintouch.png"
             alt="Get in Touch"
           />
         </div>

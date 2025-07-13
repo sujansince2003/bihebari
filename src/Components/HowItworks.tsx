@@ -13,11 +13,7 @@ const HowItworks = () => {
       <div className=" hidden md:flex items-center pt-16 justify-between">
         <div className="w-xs flex flex-col items-center gap-4   ">
           <div className=" relative border-1 border-[#FBB53C] rounded-full inline-block">
-            <img
-              className="h-64 w-64 p-1"
-              src="/src/assets/image.png "
-              alt=""
-            />
+            <img className="h-64 w-64 p-1" src="/image.png " alt="" />
             <p className=" absolute top-0 left-10 w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center">
               1
             </p>
@@ -31,15 +27,11 @@ const HowItworks = () => {
           </div>
         </div>
         <div>
-          <img className="w-23" src="/src/assets/worksarrow.png" alt="" />
+          <img className="w-23" src="/worksarrow.png" alt="" />
         </div>
         <div className="w-xs flex flex-col items-center gap-4   ">
           <div className=" relative border-1 border-[#FBB53C] rounded-full inline-block">
-            <img
-              className="h-64 w-64 p-1"
-              src="/src/assets/image.png "
-              alt=""
-            />
+            <img className="h-64 w-64 p-1" src="/image.png " alt="" />
             <p className=" absolute top-0 left-10 w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center">
               2
             </p>
@@ -53,15 +45,11 @@ const HowItworks = () => {
           </div>
         </div>
         <div>
-          <img className="w-23" src="/src/assets/worksarrow.png" alt="" />
+          <img className="w-23" src="/worksarrow.png" alt="" />
         </div>
         <div className="w-xs flex flex-col items-center gap-4   ">
           <div className=" relative border-1 border-[#FBB53C] rounded-full inline-block">
-            <img
-              className="h-64 w-64 p-1"
-              src="/src/assets/image.png "
-              alt=""
-            />
+            <img className="h-64 w-64 p-1" src="/image.png " alt="" />
             <p className=" absolute top-0 left-10 w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center">
               3
             </p>
@@ -81,7 +69,7 @@ const HowItworks = () => {
             <div className="relative border border-[#FBB53C] rounded-full inline-block">
               <img
                 className="h-48 w-48 md:h-64 md:w-64 p-1 object-cover"
-                src="/src/assets/image.png"
+                src="/image.png"
                 alt=""
               />
               <p className="absolute top-0 left-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-500 text-white flex items-center justify-center text-sm md:text-base">
@@ -138,12 +126,12 @@ const HowItworks = () => {
           <div className="flex gap-6 flex-wrap justify-center lg:justify-start">
             <img
               className="w-[130px] md:w-[150px]"
-              src="/src/assets/googleplay.png"
+              src="/googleplay.png"
               alt="Google Play"
             />
             <img
               className="w-[130px] md:w-[150px]"
-              src="/src/assets/appstore.png"
+              src="/appstore.png"
               alt="App Store"
             />
           </div>
@@ -152,7 +140,7 @@ const HowItworks = () => {
         <div>
           <img
             className="h-[280px] md:h-[360px] object-contain"
-            src="/src/assets/mobileapp.png"
+            src="/mobileapp.png"
             alt="Mobile App"
           />
         </div>

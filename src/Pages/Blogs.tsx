@@ -8,7 +8,7 @@ const BlogsData = [
     title: "Nepali Wedding",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    image: "/src/assets/service1.png",
+    image: "/service1.png",
     datePublished: "21st June 2023",
     blogId: 1,
   },
@@ -16,7 +16,7 @@ const BlogsData = [
     title: "Nepali Wedding",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    image: "/src/assets/service1.png",
+    image: "/service1.png",
     datePublished: "21st June 2023",
     blogId: 2,
   },
@@ -24,7 +24,7 @@ const BlogsData = [
     title: "Nepali Wedding",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    image: "/src/assets/service1.png",
+    image: "/service1.png",
     datePublished: "21st June 2023",
     blogId: 3,
   },
@@ -32,7 +32,7 @@ const BlogsData = [
     title: "Nepali Wedding",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    image: "/src/assets/service1.png",
+    image: "/service1.png",
     datePublished: "21st June 2023",
     blogId: 4,
   },
@@ -40,7 +40,7 @@ const BlogsData = [
     title: "Nepali Wedding",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    image: "/src/assets/service1.png",
+    image: "/service1.png",
     datePublished: "21st June 2023",
     blogId: 5,
   },
@@ -48,7 +48,7 @@ const BlogsData = [
     title: "Nepali Wedding",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    image: "/src/assets/service1.png",
+    image: "/service1.png",
     datePublished: "21st June 2023",
     blogId: 6,
   },
@@ -131,7 +131,7 @@ const Blogs = () => {
         <div className="p-4">
           <img
             className="w-[200px] md:w-[300px] object-contain"
-            src="/src/assets/getintouch.png"
+            src="/getintouch.png"
             alt="Get in Touch"
           />
         </div>

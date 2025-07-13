@@ -14,11 +14,7 @@ function BlogDetail() {
       <Nav />
       {/* Blog Content */}
       <div className="px-4 md:px-8 py-6 md:py-10 flex flex-col gap-4">
-        <img
-          src="/src/assets/blog1.png"
-          alt="Blog"
-          className="w-full h-auto rounded-lg"
-        />
+        <img src="/blog1.png" alt="Blog" className="w-full h-auto rounded-lg" />
 
         <div>
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-10">
@@ -102,7 +98,7 @@ function BlogDetail() {
         <div className="p-4">
           <img
             className="w-[200px] md:w-[300px] object-contain"
-            src="/src/assets/getintouch.png"
+            src="/getintouch.png"
             alt="Get in Touch"
           />
         </div>

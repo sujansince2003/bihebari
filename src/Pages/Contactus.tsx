@@ -8,14 +8,10 @@ const Contactus = () => {
         {/* On small screens, flex-col stacks items. On medium and up, it's a row. */}
         <div className="flex flex-col md:flex-row gap-8 md:gap-32 items-center md:items-start">
           <div className="relative  md:block">
-            <img
-              className="opacity-[65%] "
-              src="/src/assets/contactusimg.png"
-              alt=""
-            />
+            <img className="opacity-[65%] " src="/contactusimg.png" alt="" />
             <img
               className="absolute top-5 left-5"
-              src="/src/assets/contactusimg.png"
+              src="/contactusimg.png"
               alt=""
             />
           </div>
@@ -89,7 +85,7 @@ const Contactus = () => {
         <div className="p-4">
           <img
             className="w-[200px] md:w-[300px] object-contain"
-            src="/src/assets/getintouch.png"
+            src="/getintouch.png"
             alt="Get in Touch"
           />
         </div>

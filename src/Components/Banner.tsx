@@ -1,9 +1,9 @@
 const Banner = () => {
   return (
     <div
-      className="relative w-full py-24 md:py-[160px] bg-cover bg-center bg-no-repeat"
+      className="relative w-full py-22  bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('https://i.postimg.cc/bJjYN6F8/bannerimg.png')",
+        backgroundImage: "url('/bannerimg.png')",
       }}
     >
       <div className="flex flex-col items-center px-4 text-center">

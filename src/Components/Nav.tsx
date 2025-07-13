@@ -12,7 +12,7 @@ const Nav = () => {
     <nav className="relative bg-black z-20 flex justify-between items-center px-4 md:px-8 py-4 md:py-6 gap-4">
       <div className=" gap-20 hidden md:flex">
         <div className="text-white text-2xl font-bold">
-          <img src="/src/assets/logo.png" alt="Logo" className="h-16 w-20" />
+          <img src="/logo.png" alt="Logo" className="h-16 w-20" />
         </div>
         <ul className="flex flex-row gap-8 text-white font-medium text-base items-center">
           <Link to="/" className="hover:underline cursor-pointer">
@@ -21,12 +21,18 @@ const Nav = () => {
           <Link to="/about" className="hover:underline cursor-pointer">
             About us
           </Link>
-          <li className="hover:underline cursor-pointer">Our Services</li>
+          <Link to="/" className="hover:underline cursor-pointer">
+            Our Services
+          </Link>
           <Link to="/blogs" className="hover:underline cursor-pointer">
             Blog
           </Link>
-          <li className="hover:underline cursor-pointer">Membership Plans</li>
-          <li className="hover:underline cursor-pointer">Contact Us</li>
+          <Link to="/" className="hover:underline cursor-pointer">
+            Membership Plans
+          </Link>
+          <Link to={"/contactus"} className="hover:underline cursor-pointer">
+            Contact Us
+          </Link>
         </ul>
       </div>
       <div className="hidden md:flex flex-row items-center gap-10">
@@ -41,18 +47,19 @@ const Nav = () => {
       </div>
       {/* Hamburger menu icon for mobile */}
       <div className="md:hidden w-full flex justify-between items-center ">
-        <img src="/src/assets/logo.png" alt="Logo" className="h-10" />
+        <img src="/logo.png" alt="Logo" className="h-10" />
 
         <div className="flex gap-2">
           <div className="bg-white rounded-xl p-2">
             <Search size={20} />
           </div>
-          <button
+          <Link
+            to={"/login"}
             className="text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={30} /> : <Menu size={30} />}
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -73,12 +80,13 @@ const Nav = () => {
             >
               About us
             </Link>
-            <li
+            <Link
+              to={"/"}
               className="hover:underline cursor-pointer py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Our Services
-            </li>
+            </Link>
             <Link
               to="/blogs"
               className="hover:underline cursor-pointer py-2"
@@ -86,25 +94,28 @@ const Nav = () => {
             >
               Blog
             </Link>
-            <li
+            <Link
+              to={"/"}
               className="hover:underline cursor-pointer py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Membership Plans
-            </li>
-            <li
+            </Link>
+            <Link
+              to={"/contactus"}
               className="hover:underline cursor-pointer py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact Us
-            </li>
+            </Link>
           </ul>
-          <button
+          <Link
+            to={"/login"}
             className="bg-white rounded-xl py-2 px-6 text-base mt-4"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Login
-          </button>
+          </Link>
         </div>
       )}
     </nav>
