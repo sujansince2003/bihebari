@@ -6,7 +6,14 @@ import {
 } from "react-router-dom";
 
 import Layout from "./Layout/Layout";
-import { Register, Login, Landing, Blogs, BlogDetail } from "./Pages";
+import {
+  Register,
+  Login,
+  Landing,
+  Blogs,
+  BlogDetail,
+  Contactus,
+} from "./Pages";
 
 function App() {
   return (
@@ -42,6 +49,14 @@ function App() {
           element={
             <Layout>
               <Register />
+            </Layout>
+          }
+        />
+        <Route
+          path="/contactus"
+          element={
+            <Layout>
+              <Contactus />
             </Layout>
           }
         />
