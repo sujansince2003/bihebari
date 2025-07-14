@@ -124,18 +124,20 @@ const Hero = () => {
               >
                 Blog
               </Link>
-              <li
+              <Link
+                to="/membership"
                 className="hover:underline cursor-pointer py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Membership Plans
-              </li>
-              <li
+              </Link>
+              <Link
+                to={"/contactus"}
                 className="hover:underline cursor-pointer py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact Us
-              </li>
+              </Link>
             </ul>
             <button
               className="bg-white rounded-xl py-2 px-6 text-base mt-4"
