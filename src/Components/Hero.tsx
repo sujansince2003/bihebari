@@ -59,8 +59,12 @@ const Hero = () => {
             <Link to="/blogs" className="hover:underline cursor-pointer">
               Blog
             </Link>
-            <li className="hover:underline cursor-pointer">Membership Plans</li>
-            <li className="hover:underline cursor-pointer">Contact Us</li>
+            <Link to="/membership" className="hover:underline cursor-pointer">
+              Membership Plans
+            </Link>
+            <Link to="/blogs" className="hover:underline cursor-pointer">
+              Contact
+            </Link>
           </ul>
         </div>
         <div className="hidden md:flex flex-row items-center gap-10">
@@ -171,13 +175,33 @@ const Hero = () => {
         {/* Right Vertical Social Icons */}
         <div className="flex lg:flex-col items-center gap-4 mt-8 lg:mt-0">
           <div className="w-[2px] h-20 lg:h-40 bg-[#B4B4B4]"></div>
-          {[Facebook, Linkedin, Instagram, Twitter].map((Icon, idx) => (
-            <button
+          {[
+            {
+              iconName: Facebook,
+              link: "https://www.facebook.com",
+            },
+            {
+              iconName: Linkedin,
+              link: "https://www.linkedin.com",
+            },
+            {
+              iconName: Instagram,
+              link: "https://www.instagram.com",
+            },
+            {
+              iconName: Twitter,
+              link: "https://www.twitter.com",
+            },
+          ].map((social, idx) => (
+            <a
+              href={social.link}
               key={idx}
-              className="bg-white rounded-full p-2 flex items-center justify-center"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white rounded-full p-2 flex items-center justify-center hover:bg-gray-100 transition-colors"
             >
-              <Icon size={20} />
-            </button>
+              <social.iconName size={20} />
+            </a>
           ))}
         </div>
       </div>
