@@ -95,9 +95,9 @@ function BlogDetail() {
             </h2>
           </div>
         </div>
-        <div className="p-4">
+        <div className="p-0 ">
           <img
-            className="w-[200px] md:w-[300px] object-contain"
+            className="w-full md:w-[680px]  object-contain"
             src="/getintouch.png"
             alt="Get in Touch"
           />
