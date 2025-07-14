@@ -1,8 +1,9 @@
 import Nav from "../Components/Nav";
+import NewChapter from "../Components/NewChapter";
 
 const Contactus = () => {
   return (
-    <div>
+    <div className="relative">
       <Nav />
       <div className="px-8 py-32 mb-32 max-w-full">
         {/* On small screens, flex-col stacks items. On medium and up, it's a row. */}
@@ -63,9 +64,11 @@ const Contactus = () => {
         </div>
       </div>
 
-      {/* <div className="my-10 mb-[500px] md:mb-[200px]"></div>
+      <div className="my-10 mb-[500px] md:mb-[200px]">
+        <NewChapter />
+      </div>
       <div className="h-32 md:h-56 bg-black" />
-      <div className="absolute md:bottom-[60px] bottom-[-60px] w-[90%] max-w-6xl left-1/2 -translate-x-1/2 bg-white border border-white rounded-3xl flex flex-col md:flex-row items-center justify-between overflow-hidden shadow-xl">
+      <div className="absolute md:bottom-[60px] bottom-[-60px] w-[90%] max-w-6xl left-1/2 -translate-x-1/2 bg-white border border-white rounded-3xl flex flex-col md:flex-row items-center justify-between overflow-hidden shadow-xl ">
         <div className="p-6 md:p-10 flex flex-col gap-4 text-center md:text-left">
           <h4 className="text-2xl md:text-3xl font-semibold">Get in touch</h4>
           <p className="text-sm md:text-base text-gray-700">
@@ -82,14 +85,14 @@ const Contactus = () => {
             </h2>
           </div>
         </div>
-        <div className="p-4">
+        <div className="p-0 ">
           <img
-            className="w-[200px] md:w-[300px] object-contain"
+            className="w-full md:w-[680px]  object-contain"
             src="/getintouch.png"
             alt="Get in Touch"
           />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
