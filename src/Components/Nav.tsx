@@ -27,7 +27,7 @@ const Nav = () => {
           <Link to="/blogs" className="hover:underline cursor-pointer">
             Blog
           </Link>
-          <Link to="/" className="hover:underline cursor-pointer">
+          <Link to="/membership" className="hover:underline cursor-pointer">
             Membership Plans
           </Link>
           <Link to={"/contactus"} className="hover:underline cursor-pointer">
@@ -95,7 +95,7 @@ const Nav = () => {
               Blog
             </Link>
             <Link
-              to={"/"}
+              to={"/membership"}
               className="hover:underline cursor-pointer py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
