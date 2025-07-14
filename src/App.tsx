@@ -13,12 +13,13 @@ import {
   Blogs,
   BlogDetail,
   Contactus,
+  Membership,
 } from "./Pages";
 import Preloader from "./Components/PreLoader";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean | null>(true);
 
   useEffect(() => {
     // Simulate loading (e.g. API or asset load)
@@ -49,6 +50,14 @@ function App() {
               element={
                 <Layout>
                   <Blogs />
+                </Layout>
+              }
+            />
+            <Route
+              path="/membership"
+              element={
+                <Layout>
+                  <Membership />
                 </Layout>
               }
             />
